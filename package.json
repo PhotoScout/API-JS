@@ -4,7 +4,7 @@
   "description": "Node Modules simplifying calls to the Surveying Marmot's API",
   "main": "./src/SurveyingMarmotAPI",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,15 @@
   "bugs": {
     "url": "https://github.com/Surveying-Marmot/Node-Surveying-Marmot/issues"
   },
-  "homepage": "https://github.com/Surveying-Marmot/Node-Surveying-Marmot#readme"
+  "homepage": "https://github.com/Surveying-Marmot/Node-Surveying-Marmot#readme",
+  "dependencies": {
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^21.2.1",
+    "nock": "^9.1.4"
+  }
 }
