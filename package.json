@@ -1,0 +1,19 @@
+{
+  "name": "surveying-marmot-api",
+  "version": "1.0.0",
+  "description": "Node Modules simplifying calls to the Surveying Marmot's API",
+  "main": "./src/SurveyingMarmotAPI",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Surveying-Marmot/Node-Surveying-Marmot.git"
+  },
+  "author": "Surveying Marmot",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Surveying-Marmot/Node-Surveying-Marmot/issues"
+  },
+  "homepage": "https://github.com/Surveying-Marmot/Node-Surveying-Marmot#readme"
+}
