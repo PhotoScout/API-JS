@@ -3,8 +3,9 @@ import rp from 'request-promise-native'
 
 
 class Request {
-  constructor (url) {
-      this.baseUrl = url
+  constructor (url, debug=false) {
+    this.baseUrl = url
+    this.debug = debug
   }
 
   MakeUrlArgs(args) {
@@ -49,6 +50,10 @@ class Request {
     if(entrypoint.requirePassAuth) {
       requestOptions.auth = {username: options.username || '', password: options.password || ''}
     }
+
+    // If we are in debug mode, dump the request options
+    if(this.debug)
+      console.log(requestOptions)
 
     return rp(requestOptions)
   }

@@ -4,7 +4,7 @@ import * as entrypoints from './entrypoints'
 class SurveyingMarmot{
   constructor (options) {
     this.baseUrl = options.url
-    this.req = new Request(this.baseUrl)
+    this.req = new Request(this.baseUrl, options.debug || undefined)
   }
 
   ValidateToken(token) {
