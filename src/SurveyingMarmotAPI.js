@@ -47,9 +47,9 @@ class SurveyingMarmot{
     })
   }
 
-  GetGuideInfo(token) {
+  GetGuideInfo(token, id) {
     return new Promise((resolve, reject) => {
-      this.req.Call(entrypoints.GUIDE.guideInfo, {token: token}).then(
+      this.req.Call(entrypoints.GUIDE.guideInfo, {token: token, args: {guide_id: id}}).then(
         data => resolve(data)
       ).catch(
         data => reject({code:data.statusCode, message: data.error})
