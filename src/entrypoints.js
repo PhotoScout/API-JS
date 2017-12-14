@@ -60,3 +60,26 @@ export const GUIDE = {
     requireAuth: true
   }
 }
+
+export const GUIDE_PHOTO = {
+  listPhotos: {
+    name: 'Get the list of photos in a guide',
+    method: 'GET',
+    url: '/guide/photo',
+    requireAuth: true
+  },
+
+  removePhoto: {
+    name: 'Remove a photo from a guide',
+    method: 'DELETE',
+    url: '/guide/photo',
+    requireAuth: true
+  },
+
+  addPhoto: {
+    name: 'Add a photo to a guide',
+    method: 'POST',
+    url: '/guide/photo',
+    requireAuth: true
+  },
+}

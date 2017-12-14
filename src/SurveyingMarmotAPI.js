@@ -87,6 +87,38 @@ class SurveyingMarmot{
     })
   }
 
+
+
+  GetPhotoList(token, id) {
+    return new Promise((resolve, reject) => {
+      this.req.Call(entrypoints.GUIDE_PHOTO.listPhotos, {token: token, args: {guide_id: id}}).then(
+        data => resolve(data)
+      ).catch(
+        data => reject({code:data.statusCode, message: data.error})
+      )
+    })
+  }
+
+  RemovePhoto(token, id) {
+    return new Promise((resolve, reject) => {
+      this.req.Call(entrypoints.GUIDE_PHOTO.removePhoto, {token: token, args: {guide_id: id}}).then(
+        data => resolve(data)
+      ).catch(
+        data => reject({code:data.statusCode, message: data.error})
+      )
+    })
+  }
+
+  AddPhoto(token, data) {
+    return new Promise((resolve, reject) => {
+      this.req.Call(entrypoints.GUIDE_PHOTO.addPhoto, {token: token, body: data}).then(
+        data => resolve(data)
+      ).catch(
+        data => reject({code:data.statusCode, message: data.error})
+      )
+    })
+  }
+
 }
 
 export default SurveyingMarmot
