@@ -83,3 +83,12 @@ export const GUIDE_PHOTO = {
     requireAuth: true
   },
 }
+
+export const PHOTO_SEARCH = {
+  searchPhoto: {
+    name: 'Search photos in api',
+    method: 'GET',
+    url: '/photo/search',
+    requireAuth: true
+  }
+}

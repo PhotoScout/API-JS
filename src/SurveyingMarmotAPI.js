@@ -119,6 +119,20 @@ class SurveyingMarmot{
     })
   }
 
+  SearchPhoto(token, keywords, page=0, per_page=20) {
+    return new Promise((resolve, reject) => {
+      this.req.Call(entrypoints.PHOTO_SEARCH.searchPhoto, {token: token, args: {
+        keywords: keywords,
+        page: page,
+        per_page: per_page
+      }}).then(
+        data => resolve(data)
+      ).catch(
+        data => reject({code:data.statusCode, message: data.error})
+      )
+    })
+  }
+
 }
 
 export default SurveyingMarmot
